@@ -20,26 +20,27 @@ from haruka.modules.helper_funcs.misc import paginate_modules
 from haruka.modules.translations.strings import tld, tld_help 
 from haruka.modules.connection import connected
 
-PM_START = """Hello {}, my name is {}!
+PM_START = """Halo {} 👋🏼👋🏼
 
-You know how hard it is sometimes to manage group so here is the solution for you
+{} adalah bot official @KerabatOnline grup dan afiliasi.
 
-I'm group manager bot and Anti-spam for RR Players🃏
+Beberapa modul di bot ini telah diatur untuk kepentingan grup kerabat online.
+Untuk membantu staff dalam mengatur grup.
 
-Activate Anti-spam protection in your BM by this command : 
-/antispam on 
+Jika berkenan bergabung bersama kami, silahkan klik link yang telah disediakan.
+Nikmati keseruan bermain game, mencari teman, juga akan ada banyak event-event menarik.
 
-Made from the source code of [Aditya 🇮🇳](t.me/xditya)
+Terhubung :
+┏ [Kerabat Online Channel](https://t.me/KerabatOnline_Ch)
+┣ [Kerabat Online Moment](https://t.me/KerabatMoment)
+┣ [Kerabat Online Karya](https://t.me/KerabatKarya)
+┗ [Kerabat Online Twitter](https://twitter.com/KerabatOnline)
+Pengguna ini adalah [Foundernya](https://t.me/SamRamadhan) dan Pengguna ini sebagai [Co-founder](https://t.me/Estrlaa).
 
-Special thanks to [this person](t.me/denver02) for helping me.
+Ketik /help atau klik tombol bantuan
+untuk mendapatkan semua modul yang
+tersedia pada bot ini.
 
-Deploy a bot like me [now](www.github.com/xditya/GroupManager)
-
-Watch [video tutorial](https://www.youtube.com/watch?v=gXXFpTAk6Vo&feature=youtu.be) on deploying me.
-
-Click /help or Help button below to find out more about how to use me to my full potential.
-
- Add me to a group by clicking [here](http://t.me/tg_GroupManagerBot?startgroup=true).
 """
 
 
@@ -143,7 +144,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("I'm alive")
+        update.effective_message.reply_text("Bot aktif!")
 
 def send_start(bot, update):
     #Try to remove old message
@@ -157,7 +158,7 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START
 
-    keyboard = [[InlineKeyboardButton(text="🇮🇳 Language", callback_data="set_lang_")]]
+    keyboard = [[InlineKeyboardButton(text="🇮🇩Bahasa", callback_data="set_lang_")]]
     keyboard += [[InlineKeyboardButton(text="🛠 Reporting", callback_data="cntrl_panel_M"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
